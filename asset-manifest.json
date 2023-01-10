@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/unknownocean_web/static/css/main.e6c13ad2.css",
+    "main.js": "/unknownocean_web/static/js/main.c0bf648b.js",
+    "index.html": "/unknownocean_web/index.html",
+    "main.e6c13ad2.css.map": "/unknownocean_web/static/css/main.e6c13ad2.css.map",
+    "main.c0bf648b.js.map": "/unknownocean_web/static/js/main.c0bf648b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.c0bf648b.js"
+  ]
+}
