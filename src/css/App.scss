@@ -1,31 +1,17 @@
-.App {
+.main-wrapper {
   width: 100vw;
+  min-width: 350px;
+  max-width: 500px;
   height: 100vh;
   background-color: rgb(236, 236, 236);
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
 
   margin: auto;
 }
 
 a {
   all: unset;
-}
-
-.download_btn {
-  cursor: pointer;
-  width: 200px;
-  height: 50px;
-  background-color: rgb(213, 212, 255);
-  border-radius: 10px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.download_btn:hover {
-  background-color: rgb(215, 215, 247);
 }
