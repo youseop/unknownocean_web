@@ -12,7 +12,12 @@ function Modal({ isModalVisible, toggleModal }: ModalProps) {
       className={classNames("modal-background", { hidden: !isModalVisible })}
       onClick={toggleModal}
     >
-      <div className="modal-wrapper">
+      <div
+        className="modal-wrapper"
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+      >
         <div className="contents"></div>
         <a
           className="install-button"
