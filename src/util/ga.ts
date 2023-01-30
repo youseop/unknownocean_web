@@ -2,9 +2,11 @@ import ReactGA from "react-ga";
 import { createBrowserHistory } from "history";
 
 export const initGa = () => {
+  const shouldDebug = false;
   const gaTrackingId = process.env.REACT_APP_GA_TRACKING_ID;
+
   if (gaTrackingId) {
-    ReactGA.initialize(gaTrackingId, { debug: true });
+    ReactGA.initialize(gaTrackingId, { debug: shouldDebug });
     const history = createBrowserHistory();
     history.listen((response) => {
       //   console.log(response.location.pathname);
