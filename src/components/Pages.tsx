@@ -47,8 +47,8 @@ function MainContents({
 
   return (
     <div className="main-contents">
-      {pageNum === 0 ? renderFirstPage() : renderSecondPage()}
       {renderMeatBall(pageNum)}
+      {pageNum === 0 ? renderFirstPage() : renderSecondPage()}
       <MainButton onClickMainBtn={onClickMainBtn} />
     </div>
   );
