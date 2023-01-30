@@ -45,7 +45,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^5.0.0"
   },
   "homepage": "http://youseop.github.io/unknownocean_web"
 }
