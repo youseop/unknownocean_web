@@ -4,14 +4,17 @@ import Modal from "./components/Modal";
 import { useState } from "react";
 import { LAST_PAGE_NUM } from "./constant";
 import MainContents from "./components/Pages";
+import { initGa } from "./util/ga";
 
 function App() {
+  initGa();
+
   const [pageNum, setPageNum] = useState(0);
   const [isModalVisible, setIsModalVisible] = useState(false);
 
-  const toggleModal = () => {
-    setIsModalVisible(!isModalVisible);
-  };
+  const toggleModal = () => setIsModalVisible(!isModalVisible);
+
+  const moveToSpecificPage = (num: number) => setPageNum(num);
 
   const onClickMainBtn = () => {
     if (pageNum + 1 >= LAST_PAGE_NUM) {
@@ -23,10 +26,6 @@ function App() {
         behavior: "smooth",
       });
     }
-  };
-
-  const moveToSpecificPage = (num: number) => {
-    setPageNum(num);
   };
 
   return (
