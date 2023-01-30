@@ -1,13 +1,19 @@
 import classNames from "classnames";
 import { LAST_PAGE_NUM } from "../constant";
-import "../css/Pages.scss";
+import "../css/MainContents.scss";
+import MainButton from "./MainButton";
 
-interface PagesProps {
+interface MainContentsProps {
   pageNum: number;
   moveToSpecificPage: (num: number) => void;
+  onClickMainBtn: () => void;
 }
 
-function Pages({ pageNum, moveToSpecificPage }: PagesProps) {
+function MainContents({
+  pageNum,
+  moveToSpecificPage,
+  onClickMainBtn,
+}: MainContentsProps) {
   const renderMeatBall = (pageNum: number) => {
     const arr = new Array(LAST_PAGE_NUM);
     for (let i = 0; i < arr.length; i++) arr[i] = i;
@@ -32,19 +38,20 @@ function Pages({ pageNum, moveToSpecificPage }: PagesProps) {
   };
 
   const renderFirstPage = () => {
-    return <>firstPage</>;
+    return <div className="page">firstPage</div>;
   };
 
   const renderSecondPage = () => {
-    return <>secondPage</>;
+    return <div className="page">secondPage</div>;
   };
 
   return (
-    <div className="pages">
+    <div className="main-contents">
       {pageNum === 0 ? renderFirstPage() : renderSecondPage()}
       {renderMeatBall(pageNum)}
+      <MainButton onClickMainBtn={onClickMainBtn} />
     </div>
   );
 }
 
-export default Pages;
+export default MainContents;

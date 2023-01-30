@@ -1,10 +1,9 @@
 import "./css/App.scss";
 import Header from "./components/Header";
-import Pages from "./components/Pages";
-import MainButton from "./components/MainButton";
 import Modal from "./components/Modal";
 import { useState } from "react";
 import { LAST_PAGE_NUM } from "./constant";
+import MainContents from "./components/Pages";
 
 function App() {
   const [pageNum, setPageNum] = useState(0);
@@ -27,12 +26,17 @@ function App() {
   };
 
   return (
-    <div className="main-wrapper">
-      <Header />
-      <Pages pageNum={pageNum} moveToSpecificPage={moveToSpecificPage} />
-      <MainButton onClickMainBtn={onClickMainBtn} />
-      <Modal isModalVisible={isModalVisible} />
-    </div>
+    <>
+      <div className="main-wrapper">
+        <Header />
+        <MainContents
+          pageNum={pageNum}
+          moveToSpecificPage={moveToSpecificPage}
+          onClickMainBtn={onClickMainBtn}
+        />
+      </div>
+      <Modal isModalVisible={isModalVisible} toggleModal={toggleModal} />
+    </>
   );
 }
 
