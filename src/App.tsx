@@ -18,6 +18,10 @@ function App() {
       if (!isModalVisible) toggleModal();
     } else {
       setPageNum(pageNum + 1);
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
   };
 
