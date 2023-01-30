@@ -11,9 +11,9 @@
   display: flex;
   align-items: center;
 
-  // &.hidden {
-  //   display: none;
-  // }
+  &.hidden {
+    display: none;
+  }
 }
 
 .modal-wrapper {
@@ -29,12 +29,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-}
 
-.main-contents {
-  background-color: hsl(223, 93%, 77%);
-  width: 278px;
-  max-height: 320px;
+  .contents {
+    background-color: hsl(223, 93%, 77%);
+    width: 278px;
+    max-height: 320px;
+  }
 }
 
 .install-button {

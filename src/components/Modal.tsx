@@ -13,8 +13,13 @@ function Modal({ isModalVisible, toggleModal }: ModalProps) {
       onClick={toggleModal}
     >
       <div className="modal-wrapper">
-        <div className="main-contents"></div>
-        <div className="install-button">설치하기</div>
+        <div className="contents"></div>
+        <a
+          className="install-button"
+          href="https://apps.apple.com/kr/app/unknown-ocean/id1639595747"
+        >
+          앱 설치하기
+        </a>
       </div>
     </div>
   );
