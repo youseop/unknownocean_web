@@ -7,7 +7,7 @@ export const initGa = () => {
     ReactGA.initialize(gaTrackingId, { debug: true });
     const history = createBrowserHistory();
     history.listen((response) => {
-      console.log(response.location.pathname);
+      //   console.log(response.location.pathname);
       ReactGA.set({ page: response.location.pathname });
       ReactGA.pageview(response.location.pathname);
     });
