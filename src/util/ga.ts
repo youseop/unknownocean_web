@@ -4,12 +4,11 @@ import { createBrowserHistory } from "history";
 export const initGa = () => {
   const shouldDebug = false;
   const gaTrackingId = process.env.REACT_APP_GA_TRACKING_ID;
-
+  console.log("gaTrackingId", gaTrackingId);
   if (gaTrackingId) {
     ReactGA.initialize(gaTrackingId, { debug: shouldDebug });
     const history = createBrowserHistory();
     history.listen((response) => {
-      //   console.log(response.location.pathname);
       ReactGA.set({ page: response.location.pathname });
       ReactGA.pageview(response.location.pathname);
     });

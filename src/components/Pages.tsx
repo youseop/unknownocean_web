@@ -5,12 +5,14 @@ import MainButton from "./MainButton";
 
 interface MainContentsProps {
   pageNum: number;
+  isUnknownOceanInstalled: boolean;
   moveToSpecificPage: (num: number) => void;
   onClickMainBtn: () => void;
 }
 
 function MainContents({
   pageNum,
+  isUnknownOceanInstalled,
   moveToSpecificPage,
   onClickMainBtn,
 }: MainContentsProps) {
@@ -38,7 +40,11 @@ function MainContents({
   };
 
   const renderFirstPage = () => {
-    return <div className="page">firstPage</div>;
+    return (
+      <div className="page">{`firstPage ${
+        isUnknownOceanInstalled ? "installed" : "uninstalled"
+      }`}</div>
+    );
   };
 
   const renderSecondPage = () => {
