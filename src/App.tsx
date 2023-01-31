@@ -3,9 +3,10 @@ import Header from "./components/Header";
 import Modal from "./components/Modal";
 import { useEffect, useState } from "react";
 import { LAST_PAGE_NUM } from "./constant";
-import MainContents from "./components/Pages";
+import MainContents from "./components/MainContents";
 import { initGa } from "./util/ga";
 import { isAppInstalled, openUnknownOceanApp } from "./util/unknownoceanApp";
+import MainButton from "./components/MainButton";
 
 function App() {
   const [isUnknownOceanInstalled, setIsUnknownOceanInstalled] = useState(false);
@@ -50,6 +51,7 @@ function App() {
           onClickMainBtn={onClickMainBtn}
           isUnknownOceanInstalled={isUnknownOceanInstalled}
         />
+        <MainButton onClickMainBtn={onClickMainBtn} />
       </div>
       <Modal isModalVisible={isModalVisible} toggleModal={toggleModal} />
     </>
