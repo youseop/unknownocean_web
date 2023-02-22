@@ -1,8 +1,5 @@
 export const isAppInstalled = (appName: string) => {
-  const nav = window.navigator as any;
-  if (nav.standalone) {
-    return nav.canOpenURL(`${appName}://`);
-  }
+  return false;
 };
 
 export const openUnknownOceanApp = () => {
