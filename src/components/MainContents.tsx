@@ -8,14 +8,12 @@ interface MainContentsProps {
   pageNum: number;
   isUnknownOceanInstalled: boolean;
   moveToSpecificPage: (num: number) => void;
-  onClickMainBtn: () => void;
 }
 
 function MainContents({
   pageNum,
   isUnknownOceanInstalled,
   moveToSpecificPage,
-  onClickMainBtn,
 }: MainContentsProps) {
   const renderMeatBall = (pageNum: number) => {
     const arr = new Array(LAST_PAGE_NUM);
@@ -42,7 +40,6 @@ function MainContents({
 
   return (
     <div className="main-contents">
-      {renderMeatBall(pageNum)}
       {pageNum === 0 ? (
         <FirstPage isUnknownOceanInstalled={isUnknownOceanInstalled} />
       ) : (
