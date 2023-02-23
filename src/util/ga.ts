@@ -2,7 +2,7 @@ import ReactGA from "react-ga";
 import { createBrowserHistory } from "history";
 
 export const initGa = () => {
-  const shouldDebug = false;
+  const shouldDebug = true;
   const gaTrackingId = process.env.REACT_APP_GA_TRACKING_ID;
   console.log("gaTrackingId", gaTrackingId);
   if (gaTrackingId) {
