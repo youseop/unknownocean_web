@@ -3,7 +3,7 @@ import Modal from "./components/Modal";
 import { useEffect, useState } from "react";
 import { LAST_PAGE_NUM } from "./constant";
 import MainContents from "./components/MainContents";
-import { initGa } from "./util/ga";
+import { initGa, visitWebsiteTest, clickMainButton } from "./util/ga";
 import { isAppInstalled, openUnknownOceanApp } from "./util/unknownoceanApp";
 import MainButton from "./components/MainButton";
 import Header from "./components/Header";
@@ -21,9 +21,14 @@ function App() {
     } else {
       console.log("Unknown Ocean app is not installed");
     }
+
+    visitWebsiteTest();
   }, []);
 
-  const toggleModal = () => setIsModalVisible(!isModalVisible);
+  const toggleModal = () => {
+    setIsModalVisible(!isModalVisible);
+    toggleModal();
+  };
 
   const moveToSpecificPage = (num: number) => setPageNum(num);
 
@@ -39,6 +44,7 @@ function App() {
         behavior: "smooth",
       });
     }
+    clickMainButton();
   };
 
   return (

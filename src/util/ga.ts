@@ -1,18 +1,31 @@
 import ReactGA from "react-ga";
-import { createBrowserHistory } from "history";
 
 export const initGa = () => {
   const shouldDebug = true;
-  const gaTrackingId = process.env.REACT_APP_GA_TRACKING_ID;
-  console.log("gaTrackingId", gaTrackingId);
-  if (gaTrackingId) {
-    ReactGA.initialize(gaTrackingId, { debug: shouldDebug });
-    const history = createBrowserHistory();
-    history.listen((response) => {
-      ReactGA.set({ page: response.location.pathname });
-      ReactGA.pageview(response.location.pathname);
-    });
-  } else {
-    console.log("ga setting failed");
-  }
+  const gaTrackingId = "UA-255652251-2";
+  ReactGA.initialize(gaTrackingId, { debug: shouldDebug });
+};
+
+const sendGa = (category: string, action: string, label: string) => {
+  ReactGA.event({ category, action, label });
+};
+
+export const visitWebsiteTest = () => {
+  sendGa("render", "render-website", "test");
+};
+
+export const clickMainButton = () => {
+  sendGa("click", "click-button", "");
+};
+
+export const toggleModal = () => {
+  sendGa("toggle", "toggle-modal", "");
+};
+
+export const openApp = () => {
+  sendGa("open", "open-app", "");
+};
+
+export const openAppstore = () => {
+  sendGa("open", "open-appstore", "");
 };

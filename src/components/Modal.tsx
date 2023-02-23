@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import "../css/Modal.scss";
+import { openAppstore } from "../util/ga";
 
 interface ModalProps {
   isModalVisible: boolean;
@@ -7,6 +8,12 @@ interface ModalProps {
 }
 
 function Modal({ isModalVisible, toggleModal }: ModalProps) {
+  const onClickInstallBtn = () => {
+    window.location.href =
+      "https://apps.apple.com/kr/app/unknown-ocean/id1639595747";
+    openAppstore();
+  };
+
   return (
     <div
       className={classNames("modal-background", { hidden: !isModalVisible })}
@@ -19,12 +26,9 @@ function Modal({ isModalVisible, toggleModal }: ModalProps) {
         }}
       >
         <div className="contents"></div>
-        <a
-          className="install-button"
-          href="https://apps.apple.com/kr/app/unknown-ocean/id1639595747"
-        >
+        <div className="install-button" onClick={onClickInstallBtn}>
           앱 설치하기
-        </a>
+        </div>
       </div>
     </div>
   );
