@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import "../css/Modal.scss";
-import { openAppstore } from "../util/ga";
+import { gaOpenAppstore } from "../util/ga";
 
 interface ModalProps {
   isModalVisible: boolean;
@@ -11,7 +11,7 @@ function Modal({ isModalVisible, toggleModal }: ModalProps) {
   const onClickInstallBtn = () => {
     window.location.href =
       "https://apps.apple.com/kr/app/unknown-ocean/id1639595747";
-    openAppstore();
+    gaOpenAppstore();
   };
 
   return (

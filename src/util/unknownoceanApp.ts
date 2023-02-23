@@ -6,5 +6,5 @@ export const isAppInstalled = (appName: string) => {
 
 export const openUnknownOceanApp = () => {
   window.location.href = "unknownocean://";
-  openApp();
+  gaOpenApp();
 };

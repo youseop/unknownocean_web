@@ -1,7 +1,7 @@
 import ReactGA from "react-ga";
 
 export const initGa = () => {
-  const shouldDebug = true;
+  const shouldDebug = false;
   const gaTrackingId = "UA-255652251-2";
   ReactGA.initialize(gaTrackingId, { debug: shouldDebug });
 };
@@ -10,22 +10,22 @@ const sendGa = (category: string, action: string, label: string) => {
   ReactGA.event({ category, action, label });
 };
 
-export const visitWebsiteTest = () => {
+export const gaVisitWebsiteTest = () => {
   sendGa("render", "render-website", "test");
 };
 
-export const clickMainButton = () => {
+export const gaClickMainButton = () => {
   sendGa("click", "click-button", "");
 };
 
-export const toggleModal = () => {
+export const gaToggleModal = () => {
   sendGa("toggle", "toggle-modal", "");
 };
 
-export const openApp = () => {
+export const gaOpenApp = () => {
   sendGa("open", "open-app", "");
 };
 
-export const openAppstore = () => {
+export const gaOpenAppstore = () => {
   sendGa("open", "open-appstore", "");
 };

@@ -3,7 +3,7 @@ import Modal from "./components/Modal";
 import { useEffect, useState } from "react";
 import { LAST_PAGE_NUM } from "./constant";
 import MainContents from "./components/MainContents";
-import { initGa, visitWebsiteTest, clickMainButton } from "./util/ga";
+import { initGa, gaVisitWebsiteTest, gaClickMainButton } from "./util/ga";
 import { isAppInstalled, openUnknownOceanApp } from "./util/unknownoceanApp";
 import MainButton from "./components/MainButton";
 import Header from "./components/Header";
@@ -22,7 +22,7 @@ function App() {
       console.log("Unknown Ocean app is not installed");
     }
 
-    visitWebsiteTest();
+    gaVisitWebsiteTest();
   }, []);
 
   const toggleModal = () => {
@@ -34,9 +34,8 @@ function App() {
 
   const onClickMainBtn = () => {
     if (pageNum + 1 >= LAST_PAGE_NUM) {
-      if (isUnknownOceanInstalled) {
-        openUnknownOceanApp();
-      } else if (!isModalVisible) toggleModal();
+      if (isUnknownOceanInstalled) openUnknownOceanApp();
+      else if (!isModalVisible) toggleModal();
     } else {
       setPageNum(pageNum + 1);
       window.scrollTo({
@@ -44,7 +43,7 @@ function App() {
         behavior: "smooth",
       });
     }
-    clickMainButton();
+    gaClickMainButton();
   };
 
   return (
