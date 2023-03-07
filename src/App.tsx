@@ -6,6 +6,7 @@ import MainContents from "./components/MainContents";
 import { initGa, gaVisitWebsiteTest, gaClickMainButton } from "./util/ga";
 import MainButton from "./components/MainButton";
 import Header from "./components/Header";
+import { initAmplitude } from "./util/amplitude";
 
 function App() {
   const [pageNum, setPageNum] = useState(0);
@@ -13,7 +14,7 @@ function App() {
 
   useEffect(() => {
     initGa();
-
+    initAmplitude();
     gaVisitWebsiteTest();
   }, []);
 

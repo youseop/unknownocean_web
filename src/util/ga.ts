@@ -1,7 +1,7 @@
 import ReactGA from "react-ga";
 
 export const initGa = () => {
-  const shouldDebug = true;
+  const shouldDebug = false;
   const gaTrackingId = process.env.REACT_APP_GA_TRACKING_ID;
   if (gaTrackingId) {
     ReactGA.initialize(gaTrackingId, { debug: shouldDebug });
