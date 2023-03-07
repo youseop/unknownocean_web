@@ -1,15 +1,7 @@
 import "../css/FirstPage.scss";
 
-interface FirstPageProps {
-  isUnknownOceanInstalled: boolean;
-}
-
-function FirstPage({ isUnknownOceanInstalled }: FirstPageProps) {
-  return (
-    <div className="page">{`firstPage ${
-      isUnknownOceanInstalled ? "installed" : "uninstalled"
-    }`}</div>
-  );
+function FirstPage() {
+  return <div className="page">{"firstpage"}</div>;
 }
 
 export default FirstPage;

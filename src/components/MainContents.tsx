@@ -6,15 +6,10 @@ import SecondPage from "./SecondPage";
 
 interface MainContentsProps {
   pageNum: number;
-  isUnknownOceanInstalled: boolean;
   moveToSpecificPage: (num: number) => void;
 }
 
-function MainContents({
-  pageNum,
-  isUnknownOceanInstalled,
-  moveToSpecificPage,
-}: MainContentsProps) {
+function MainContents({ pageNum, moveToSpecificPage }: MainContentsProps) {
   const renderMeatBall = (pageNum: number) => {
     const arr = new Array(LAST_PAGE_NUM);
     for (let i = 0; i < arr.length; i++) arr[i] = i;
@@ -40,11 +35,7 @@ function MainContents({
 
   return (
     <div className="main-contents">
-      {pageNum === 0 ? (
-        <FirstPage isUnknownOceanInstalled={isUnknownOceanInstalled} />
-      ) : (
-        <SecondPage />
-      )}
+      {pageNum === 0 ? <FirstPage /> : <SecondPage />}
     </div>
   );
 }

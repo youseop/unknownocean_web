@@ -1,8 +1,4 @@
-import { openApp } from "./ga";
-
-export const isAppInstalled = (appName: string) => {
-  return false;
-};
+import { gaOpenApp } from "./ga";
 
 export const openUnknownOceanApp = () => {
   window.location.href = "unknownocean://";
