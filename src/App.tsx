@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { LAST_PAGE_NUM } from "./constant";
 import MainContents from "./components/MainContents";
 import { initGa, gaVisitWebsiteTest, gaClickMainButton } from "./util/ga";
-import { openUnknownOceanApp } from "./util/unknownoceanApp";
 import MainButton from "./components/MainButton";
 import Header from "./components/Header";
 
@@ -20,7 +19,6 @@ function App() {
 
   const toggleModal = () => {
     setIsModalVisible(!isModalVisible);
-    toggleModal();
   };
 
   const moveToSpecificPage = (num: number) => setPageNum(num);
