@@ -17,11 +17,13 @@
 }
 
 .modal-wrapper {
+  max-width: 400px;
   width: 100%;
   height: 580px;
   background: #f0f0f8;
   border-radius: 11px;
 
+  margin: auto;
   padding: 26px 24px;
   box-sizing: border-box;
 
