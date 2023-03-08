@@ -1,7 +1,11 @@
 import "../css/Header.scss";
 
-function Header() {
-  return <div className="header">header </div>;
+interface HeaderProps {
+  text: string;
+}
+
+function Header({ text }: HeaderProps) {
+  return <div className="header">{text} </div>;
 }
 
 export default Header;

@@ -5,8 +5,7 @@ import { LAST_PAGE_NUM } from "./constant";
 import MainContents from "./components/MainContents";
 import { initGa, gaVisitWebsiteTest, gaClickMainButton } from "./util/ga";
 import MainButton from "./components/MainButton";
-import Header from "./components/Header";
-import { initAmplitude } from "./util/amplitude";
+import { initAmplitude, logAmplitudeEvent } from "./util/amplitude";
 
 function App() {
   const [pageNum, setPageNum] = useState(0);
@@ -26,13 +25,17 @@ function App() {
 
   const onClickMainBtn = () => {
     if (pageNum + 1 >= LAST_PAGE_NUM) {
-      if (!isModalVisible) toggleModal();
+      if (!isModalVisible) {
+        toggleModal();
+        logAmplitudeEvent("open_modal");
+      }
     } else {
       setPageNum(pageNum + 1);
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
+      logAmplitudeEvent("go_to_second_page");
     }
     gaClickMainButton();
   };
@@ -40,7 +43,6 @@ function App() {
   return (
     <>
       <div className="main-wrapper">
-        <Header />
         <MainContents
           pageNum={pageNum}
           moveToSpecificPage={moveToSpecificPage}

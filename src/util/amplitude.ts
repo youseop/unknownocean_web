@@ -13,3 +13,7 @@ export const initAmplitude = () => {
     });
   }
 };
+
+export const logAmplitudeEvent = (eventName: string) => {
+  amplitude.logEvent(eventName);
+};
