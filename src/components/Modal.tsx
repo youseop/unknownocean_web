@@ -27,7 +27,7 @@ function Modal({ isModalVisible, toggleModal }: ModalProps) {
       >
         <div className="contents"></div>
         <div className="install-button" onClick={onClickInstallBtn}>
-          앱 설치하기
+          전시 관람하기
         </div>
       </div>
     </div>

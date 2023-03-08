@@ -12,6 +12,7 @@ interface MainContentsProps {
 function MainContents({ pageNum, moveToSpecificPage }: MainContentsProps) {
   return (
     <div className="main-contents">
+      {/* {pageNum === 1 ? <FirstPage /> : <SecondPage />} */}
       {pageNum === 0 ? <FirstPage /> : <SecondPage />}
     </div>
   );
