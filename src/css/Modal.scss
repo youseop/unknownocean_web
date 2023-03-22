@@ -2,10 +2,11 @@
   position: fixed;
   bottom: 0;
   width: 100vw;
-  height: 100vh;
+  height: 102vh;
+  transform: translateY(2px);
   background: rgba(0, 0, 0, 0.81);
 
-  padding: 30px 31px;
+  padding: 30px 0px;
   box-sizing: border-box;
 
   display: flex;
@@ -17,15 +18,17 @@
 }
 
 .modal-wrapper {
+  position: fixed;
+  bottom: 20px;
   max-width: 400px;
-  width: 100%;
+  width: calc(100% - 40px);
+
   height: 580px;
   background: #f0f0f8;
   border-radius: 11px;
 
   margin: auto;
-  padding: 26px 24px;
-  box-sizing: border-box;
+  margin-left: 20px;
 
   display: flex;
   flex-direction: column;
@@ -43,7 +46,8 @@
   cursor: pointer;
   color: white;
 
-  width: 100%;
+  width: calc(100% - 44px);
+  margin-bottom: 22px;
   height: 55px;
 
   background: #1a1a1e;
