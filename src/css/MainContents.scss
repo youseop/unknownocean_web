@@ -5,8 +5,25 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 10px;
-  .page {
-    min-height: 480px;
-    margin-bottom: 100px;
-  }
+}
+
+.text {
+  padding: 30px 4px;
+  white-space: pre-wrap;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.orange-text {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 29px;
+
+  color: #eb6200;
+}
+
+.small-text {
+  font-weight: 400;
+  font-size: 15px;
 }

@@ -9,8 +9,13 @@
   justify-content: space-between;
 
   margin: auto;
-  padding: 21px;
+  padding: 23px;
+  padding-top: 13px;
   box-sizing: border-box;
+
+  font-family: "Chonburi", cursive;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
 }
 
 .meatball-wrapper {
@@ -19,8 +24,8 @@
   justify-content: center;
   gap: 7px;
   .meatball {
-    width: 11px;
-    height: 11px;
+    width: 9px;
+    height: 9px;
     border-radius: 6px;
     background: #f4c7a7;
     &.current {
