@@ -121,7 +121,7 @@ export const contentsOfArtist: {
   {
     title: "Love me more",
     artist: "SEOJIN",
-    instagramUrl: "https://www.instagram.com/_i.seo_/",
+    instagramUrl: "https://www.instagram.com/iseo_2/",
     desc: `집착, 과도한 사랑에 대하여 3D로 표현한 전시.
 
 ._ 천사 or 악마,
