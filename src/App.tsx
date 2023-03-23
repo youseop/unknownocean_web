@@ -1,6 +1,7 @@
 import "./css/App.scss";
 import Modal from "./components/Modal";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { LAST_PAGE_NUM } from "./constant";
 import MainContents from "./components/MainContents";
 import { initGa, gaVisitWebsiteTest, gaClickMainButton } from "./util/ga";
@@ -42,6 +43,10 @@ function App() {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Unknown Ocean</title>
+      </Helmet>
       <div className="main-wrapper">
         <MainContents
           pageNum={pageNum}

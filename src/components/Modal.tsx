@@ -1,18 +1,7 @@
 import classNames from "classnames";
 import "../css/Modal.scss";
 import { gaOpenAppstore } from "../util/ga";
-import queryString from "query-string";
-const scan1 = require("../img/scan_01.png");
-const scan2 = require("../img/scan_02.png");
-const scan3 = require("../img/scan_03.png");
-const scan4 = require("../img/scan_04.png");
-const scan5 = require("../img/scan_05.png");
-const scan6 = require("../img/scan_06.png");
-const scan7 = require("../img/scan_07.png");
-const scan8 = require("../img/scan_08.png");
-const scan9 = require("../img/scan_09.png");
-const scan10 = require("../img/scan_10.png");
-const scan11 = require("../img/scan_11.png");
+import { artistCode, scanImgs } from "../util/artistInfo";
 
 interface ModalProps {
   isModalVisible: boolean;
@@ -20,22 +9,6 @@ interface ModalProps {
 }
 
 function Modal({ isModalVisible, toggleModal }: ModalProps) {
-  const code = queryString.parse(window.location.search).code;
-  const artistCode = code ? Number(code) : 1;
-  const scanImg = [
-    scan1,
-    scan2,
-    scan3,
-    scan4,
-    scan5,
-    scan6,
-    scan7,
-    scan8,
-    scan9,
-    scan10,
-    scan11,
-  ];
-
   const onClickInstallBtn = () => {
     window.location.href =
       "https://apps.apple.com/kr/app/unknown-ocean/id1639595747";
@@ -63,7 +36,7 @@ function Modal({ isModalVisible, toggleModal }: ModalProps) {
 전시 관람하기 버튼을 눌러 앱을 다운로드 받아주세요.`}
           </span>
         </span>
-        <img src={scanImg[artistCode - 1]} alt="" />
+        <img src={scanImgs[artistCode]} alt="" />
         <div className="install-button" onClick={onClickInstallBtn}>
           전시 관람하기
         </div>
