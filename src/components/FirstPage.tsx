@@ -1,11 +1,9 @@
 import "../css/FirstPage.scss";
+import { onClickInstagramIcon } from "../util/util";
 const objectSafariImg = require("../img/object-safari.png");
 const instagramIcon = require("../img/instagram_icon.png");
 
 function FirstPage() {
-  const onClickInstagramIcon = () => {
-    window.open("https://www.instagram.com/unknowwnocean/", "_blank");
-  };
   return (
     <div className="first-page">
       <img className="img" src={objectSafariImg} alt="error" />
@@ -41,7 +39,9 @@ function FirstPage() {
             className="instagram-icon"
             src={instagramIcon}
             alt="error"
-            onClick={onClickInstagramIcon}
+            onClick={() => {
+              onClickInstagramIcon("https://www.instagram.com/unknowwnocean/");
+            }}
           />
         </span>
       </div>

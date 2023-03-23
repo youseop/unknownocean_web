@@ -1,0 +1,31 @@
+.second-page {
+  min-height: 480px;
+  margin-bottom: 100px;
+  .img {
+    border-radius: 11px;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .title {
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+  }
+  .artist {
+    font-weight: 400;
+    font-size: 17px;
+  }
+  .artist-wrapper {
+    display: flex;
+  }
+  .instagram-icon {
+    width: 17px;
+    height: 17px;
+    padding: 15px;
+    transform: translate(0px, -10px);
+  }
+  .text {
+    padding-top: 10px;
+  }
+}
