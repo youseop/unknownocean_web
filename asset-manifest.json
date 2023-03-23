@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.b8479fb5.css",
-    "main.js": "/static/js/main.c8357cf1.js",
+    "main.css": "/static/css/main.379a1a6f.css",
+    "main.js": "/static/js/main.1672e2a4.js",
     "static/media/scan_06.png": "/static/media/scan_06.8c068c00f1430676344c.png",
     "static/media/scan_09.png": "/static/media/scan_09.7d52427b8b9a53f9ce62.png",
     "static/media/scan_07.png": "/static/media/scan_07.c8a5e4b96227a7361d2c.png",
     "static/media/scan_08.png": "/static/media/scan_08.fc856b0ac3a4aa3fd160.png",
     "static/media/scan_03.png": "/static/media/scan_03.10e560f1010b637e59e2.png",
     "static/media/scan_05.png": "/static/media/scan_05.2a3e17ec9c0df1e17895.png",
+    "static/media/object-safari.png": "/static/media/object-safari.8e86122145ee097c6c35.png",
     "static/media/scan_01.png": "/static/media/scan_01.1ab46627e973e8a89069.png",
     "static/media/scan_10.png": "/static/media/scan_10.b0dfb578d2fa8fe6bef6.png",
     "static/media/scan_11.png": "/static/media/scan_11.7e15760ec7c8f6d77c72.png",
     "static/media/scan_02.png": "/static/media/scan_02.bc0b439c705703403d23.png",
     "static/media/scan_04.png": "/static/media/scan_04.143da4e054f5ec16718b.png",
-    "static/media/artist_01.png": "/static/media/artist_01.70ac58f0eb8856e1ddb0.png",
-    "static/media/object-safari.png": "/static/media/object-safari.ec866abcb459ad93b3f5.png",
+    "static/media/artist_01.png": "/static/media/artist_01.9dda18f257376e185246.png",
+    "static/media/artist_02.png": "/static/media/artist_02.04d6f2f16f4aa886d049.png",
     "index.html": "/index.html",
-    "main.b8479fb5.css.map": "/static/css/main.b8479fb5.css.map",
-    "main.c8357cf1.js.map": "/static/js/main.c8357cf1.js.map"
+    "main.379a1a6f.css.map": "/static/css/main.379a1a6f.css.map",
+    "main.1672e2a4.js.map": "/static/js/main.1672e2a4.js.map"
   },
   "entrypoints": [
-    "static/css/main.b8479fb5.css",
-    "static/js/main.c8357cf1.js"
+    "static/css/main.379a1a6f.css",
+    "static/js/main.1672e2a4.js"
   ]
 }
