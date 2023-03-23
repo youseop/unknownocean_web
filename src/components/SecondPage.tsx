@@ -17,7 +17,7 @@ function SecondPage() {
           src={instagramIcon}
           alt="error"
           onClick={() => {
-            onClickInstagramIcon("https://www.instagram.com/unknowwnocean/");
+            onClickInstagramIcon(contentOfArtist.instagramUrl);
           }}
         />
       </div>
