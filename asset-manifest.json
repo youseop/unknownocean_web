@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.bd1a3656.css",
-    "main.js": "/static/js/main.09266061.js",
+    "main.css": "/static/css/main.7e29ed62.css",
+    "main.js": "/static/js/main.bba8b78e.js",
+    "static/media/objects.mov": "/static/media/objects.9a952fc8e9d41a85336f.mov",
     "static/media/object-safari.png": "/static/media/object-safari.04a90cb05565279823eb.png",
     "static/media/scan_06.png": "/static/media/scan_06.8c068c00f1430676344c.png",
     "static/media/scan_09.png": "/static/media/scan_09.7d52427b8b9a53f9ce62.png",
@@ -14,16 +15,23 @@
     "static/media/scan_11.png": "/static/media/scan_11.7e15760ec7c8f6d77c72.png",
     "static/media/scan_02.png": "/static/media/scan_02.bc0b439c705703403d23.png",
     "static/media/scan_04.png": "/static/media/scan_04.143da4e054f5ec16718b.png",
-    "static/media/artist_01.png": "/static/media/artist_01.9dda18f257376e185246.png",
-    "static/media/artist_11.png": "/static/media/artist_11.b86697ffc06495ba6d4e.png",
-    "static/media/artist_04.png": "/static/media/artist_04.519f22ce7e3d6146e385.png",
-    "static/media/artist_02.png": "/static/media/artist_02.04d6f2f16f4aa886d049.png",
+    "static/media/artist_10.png": "/static/media/artist_10.9f0d74895c913b5f414a.png",
+    "static/media/artist_02.png": "/static/media/artist_02.6212ef66858a4f51da03.png",
+    "static/media/artist_11.png": "/static/media/artist_11.34b1724c9fc84caaced4.png",
+    "static/media/artist_04.png": "/static/media/artist_04.61bad4b210a88d333c75.png",
+    "static/media/artist_09.png": "/static/media/artist_09.7a87c2eb70b7ebc2c668.png",
+    "static/media/artist_07.png": "/static/media/artist_07.8a06f43c2afffd881d39.png",
+    "static/media/artist_03.png": "/static/media/artist_03.ff1709102f799658676e.png",
+    "static/media/artist_01.png": "/static/media/artist_01.8b1ad194a30a7bb820fa.png",
+    "static/media/artist_05.png": "/static/media/artist_05.04d6f2f16f4aa886d049.png",
+    "static/media/artist_06.png": "/static/media/artist_06.460f7d3c856fd64539eb.png",
+    "static/media/artist_08.png": "/static/media/artist_08.4f413dfdcd00e8537dd9.png",
     "index.html": "/index.html",
-    "main.bd1a3656.css.map": "/static/css/main.bd1a3656.css.map",
-    "main.09266061.js.map": "/static/js/main.09266061.js.map"
+    "main.7e29ed62.css.map": "/static/css/main.7e29ed62.css.map",
+    "main.bba8b78e.js.map": "/static/js/main.bba8b78e.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd1a3656.css",
-    "static/js/main.09266061.js"
+    "static/css/main.7e29ed62.css",
+    "static/js/main.bba8b78e.js"
   ]
 }
