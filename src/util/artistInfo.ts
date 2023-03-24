@@ -12,15 +12,15 @@ const scan10 = require("../img/scan_10.png");
 const scan11 = require("../img/scan_11.png");
 const artist1 = require("../img/artist_01.png");
 const artist2 = require("../img/artist_02.png");
-const artist3 = require("../img/artist_02.png");
+const artist3 = require("../img/artist_03.png");
 const artist4 = require("../img/artist_04.png");
-const artist5 = require("../img/artist_02.png");
-const artist6 = require("../img/artist_02.png");
-const artist7 = require("../img/artist_02.png");
-const artist8 = require("../img/artist_02.png");
-const artist9 = require("../img/artist_02.png");
-const artist10 = require("../img/artist_02.png");
-const artist11 = require("../img/artist_02.png");
+const artist5 = require("../img/artist_05.png");
+const artist6 = require("../img/artist_06.png");
+const artist7 = require("../img/artist_07.png");
+const artist8 = require("../img/artist_08.png");
+const artist9 = require("../img/artist_09.png");
+const artist10 = require("../img/artist_10.png");
+const artist11 = require("../img/artist_11.png");
 
 export const contentsOfArtist: {
   title: string;
@@ -42,7 +42,7 @@ export const contentsOfArtist: {
 이 풍진(風塵) 세상에서 연꽃같이 곱고 정결하게 살아가는 이 그 몇이나 될까.
 
 연꽃같이 강인하고 순수한 누군가의 마음을 다채로운 오브젝트로 그려내어본다.`,
-    src: artist2,
+    src: artist1,
   },
   {
     title: "의외",
@@ -193,7 +193,7 @@ Way to the universe는 2층에 자리한 가게의 이름 “우주”와 검�
 ];
 
 export const scanImgs = [
-  scan1,
+  scan5,
   scan1,
   scan2,
   scan3,
