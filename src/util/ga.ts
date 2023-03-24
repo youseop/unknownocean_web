@@ -12,8 +12,8 @@ const sendGa = (category: string, action: string, label: string) => {
   ReactGA.event({ category, action, label });
 };
 
-export const gaVisitWebsiteTest = () => {
-  sendGa("render", "render-website", "test");
+export const gaVisitWebsite = () => {
+  sendGa("render", "render-website", "");
 };
 
 export const gaClickMainButton = () => {
@@ -30,4 +30,12 @@ export const gaOpenApp = () => {
 
 export const gaOpenAppstore = () => {
   sendGa("open", "open-appstore", "");
+};
+
+export const gaOpenAppstoreInAndroid = () => {
+  sendGa("open", "try-to-open-appstore-in-android", "");
+};
+
+export const gaIsNotIOS = () => {
+  sendGa("open", "not-ios", "");
 };

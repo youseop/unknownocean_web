@@ -1,7 +1,8 @@
 import classNames from "classnames";
 import "../css/Modal.scss";
-import { gaOpenAppstore } from "../util/ga";
+import { gaOpenAppstore, gaOpenAppstoreInAndroid } from "../util/ga";
 import { artistCode, scanImgs } from "../util/artistInfo";
+import { isIOS } from "../util/ios";
 
 interface ModalProps {
   isModalVisible: boolean;
@@ -10,9 +11,14 @@ interface ModalProps {
 
 function Modal({ isModalVisible, toggleModal }: ModalProps) {
   const onClickInstallBtn = () => {
-    window.location.href =
-      "https://apps.apple.com/kr/app/unknown-ocean/id1639595747";
-    gaOpenAppstore();
+    if (isIOS()) {
+      window.location.href =
+        "https://apps.apple.com/kr/app/unknown-ocean/id1639595747";
+      gaOpenAppstore();
+    } else {
+      alert("안드로이드 앱은 현재 준비중입니다.🥹");
+      gaOpenAppstoreInAndroid();
+    }
   };
 
   return (

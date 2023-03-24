@@ -4,9 +4,16 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { LAST_PAGE_NUM } from "./constant";
 import MainContents from "./components/MainContents";
-import { initGa, gaVisitWebsiteTest, gaClickMainButton } from "./util/ga";
+import {
+  initGa,
+  gaVisitWebsite,
+  gaClickMainButton,
+  gaIsNotIOS,
+  gaToggleModal,
+} from "./util/ga";
 import MainButton from "./components/MainButton";
 import { initAmplitude, logAmplitudeEvent } from "./util/amplitude";
+import { isIOS } from "./util/ios";
 
 function App() {
   const [pageNum, setPageNum] = useState(0);
@@ -15,10 +22,14 @@ function App() {
   useEffect(() => {
     initGa();
     initAmplitude();
-    gaVisitWebsiteTest();
+    gaVisitWebsite();
+    if (!isIOS()) {
+      gaIsNotIOS();
+    }
   }, []);
 
   const toggleModal = () => {
+    gaToggleModal();
     setIsModalVisible(!isModalVisible);
   };
 
